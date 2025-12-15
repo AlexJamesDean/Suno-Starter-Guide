@@ -44,7 +44,6 @@ Once you’ve mastered the basics, choose your next path:
 ## 🌍 Other Places You’ll Find It
 
 - 🔗 [AJThe.Dev – Official Site](https://ajthe.dev)
-- 📦 [GitHub Repository](https://github.com/your-username/suno-starter-guide) *(optional if public)*
 - 🛒 [Free Download on Gumroad](https://ajthedev.gumroad.com/l/suno-starter-guide)
 
 ---
