@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L46ED25B5Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L46ED25B5Q');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta -->
+    <title>The AJ Suno V5 Starter Guide | Beginner AI Music Generation | AJTheDev</title>
+    <meta name="description" content="A beginner-friendly guide to getting started with Suno V5 AI music generation. Learn the basics of structure tags, vocal tags, and production tags. By AJTheDev.">
+    <meta name="keywords" content="Suno V5 guide, Suno AI music, Suno tutorial, AI music generation, Suno beginner, Suno basics, Suno prompts">
+    <meta name="author" content="AJTheDev">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="The AJ Suno V5 Starter Guide | Beginner AI Music Generation">
+    <meta property="og:description" content="A beginner-friendly guide to getting started with Suno V5. Learn structure tags, vocal tags, and production basics.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ajthe.dev/suno-guide/bronze/">
+    <meta property="og:image" content="https://ajthe.dev/assets/images/og-suno-guide.png">
+    <meta property="og:locale" content="en_GB">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The AJ Suno V5 Starter Guide | AI Music Generation">
+    <meta name="twitter:description" content="A beginner-friendly guide to getting started with Suno V5. Learn the basics.">
+    <meta name="twitter:image" content="https://ajthe.dev/assets/images/og-suno-guide.png">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://ajthe.dev/suno-guide/bronze/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="https://ajthe.dev/assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="https://ajthe.dev/assets/images/apple-touch-icon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro:wght@400;600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://ajthe.dev/assets/css/variables.css">
+    <link rel="stylesheet" href="https://ajthe.dev/assets/css/reset.css">
+    <link rel="stylesheet" href="https://ajthe.dev/assets/css/typography.css">
+    <link rel="stylesheet" href="https://ajthe.dev/assets/css/layout.css">
+    <link rel="stylesheet" href="https://ajthe.dev/assets/css/components.css">
+    <link rel="stylesheet" href="https://ajthe.dev/assets/css/utilities.css">
+    <link rel="stylesheet" href="https://ajthe.dev/assets/css/blog.css">
+    
+    <style>
+        /* Guide-specific styles */
+        .guide-hero {
+            background: linear-gradient(180deg, rgba(10,10,10,0.95) 0%, rgba(22,22,22,0.98) 100%);
+            padding: 6rem 0 4rem;
+            border-bottom: 1px solid var(--color-brick-dark);
+        }
+        .guide-hero__badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #cd7f32, #b8860b);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .guide-hero__title {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--color-white);
+        }
+        .guide-hero__subtitle {
+            font-size: 1.25rem;
+            color: var(--color-chalk);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+        .guide-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        .guide-stat {
+            text-align: center;
+        }
+        .guide-stat__number {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--color-white);
+        }
+        .guide-stat__label {
+            font-size: 0.875rem;
+            color: var(--color-stone);
+        }
+        
+        /* Table of Contents */
+        .guide-toc {
+            background: var(--color-concrete);
+            border: 1px solid var(--color-brick-dark);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+        .guide-toc__title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-white);
+        }
+        .guide-toc__list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            columns: 2;
+            column-gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            .guide-toc__list { columns: 1; }
+        }
+        .guide-toc__item {
+            margin-bottom: 0.5rem;
+            break-inside: avoid;
+        }
+        .guide-toc__link {
+            color: var(--color-chalk);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .guide-toc__link:hover {
+            color: var(--color-white);
+        }
+        
+        /* Chapter sections */
+        .guide-chapter {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--color-brick-dark);
+        }
+        .guide-chapter:last-child {
+            border-bottom: none;
+        }
+        .guide-chapter__number {
+            font-family: var(--font-heading);
+            font-size: 0.875rem;
+            color: var(--color-stone);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+        .guide-chapter__title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Content styling */
+        .guide-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--color-white);
+            margin: 2.5rem 0 1rem;
+        }
+        .guide-content h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-white);
+            margin: 2rem 0 0.75rem;
+        }
+        .guide-content p {
+            color: var(--color-chalk);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .guide-content ul, .guide-content ol {
+            color: var(--color-chalk);
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        .guide-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        .guide-content code {
+            font-family: 'Source Code Pro', monospace;
+            background: var(--color-brick-dark);
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 0.9em;
+            color: #e879f9;
+        }
+        .guide-content pre {
+            background: var(--color-black);
+            border: 1px solid var(--color-brick-dark);
+            border-radius: 8px;
+            padding: 1.5rem;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        .guide-content pre code {
+            background: none;
+            padding: 0;
+            color: var(--color-chalk);
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+        .guide-content blockquote {
+            border-left: 4px solid #cd7f32;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--color-chalk);
+        }
+        .guide-content hr {
+            border: none;
+            border-top: 1px solid var(--color-brick-dark);
+            margin: 3rem 0;
+        }
+        
+        /* Tables */
+        .guide-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+        .guide-content th {
+            background: var(--color-brick-dark);
+            color: var(--color-white);
+            font-weight: 600;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--color-brick);
+        }
+        .guide-content td {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--color-brick-dark);
+            color: var(--color-chalk);
+        }
+        .guide-content tr:nth-child(even) {
+            background: rgba(255,255,255,0.02);
+        }
+        
+        /* Callout boxes */
+        .guide-callout {
+            background: var(--color-concrete);
+            border-left: 4px solid #cd7f32;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .guide-callout--warning {
+            border-left-color: #f59e0b;
+        }
+        .guide-callout--tip {
+            border-left-color: #10b981;
+        }
+        .guide-callout__title {
+            font-weight: 600;
+            color: var(--color-white);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Tag display */
+        .tag-display {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(205,127,50,0.2), rgba(184,134,11,0.2));
+            border: 1px solid rgba(205,127,50,0.3);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-family: 'Source Code Pro', monospace;
+            font-size: 0.875rem;
+            color: #f4a460;
+            margin: 0.25rem;
+        }
+        
+        /* Copy button for code blocks */
+        .code-block-wrapper {
+            position: relative;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: var(--color-brick);
+            border: none;
+            color: var(--color-chalk);
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .code-block-wrapper:hover .copy-btn {
+            opacity: 1;
+        }
+        .copy-btn:hover {
+            background: var(--color-brick-light);
+        }
+        
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--color-brick);
+            color: var(--color-white);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 100;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            background: var(--color-brick-light);
+            transform: translateY(-2px);
+        }
+        
+        /* CTA Section */
+        .guide-cta {
+            background: linear-gradient(135deg, rgba(205,127,50,0.1), rgba(184,134,11,0.1));
+            border: 1px solid rgba(205,127,50,0.2);
+            border-radius: 12px;
+            padding: 3rem;
+            text-align: center;
+            margin: 4rem 0;
+        }
+        .guide-cta__title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--color-white);
+            margin-bottom: 1rem;
+        }
+        .guide-cta__text {
+            color: var(--color-chalk);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body class="page page--guide">
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="https://ajthe.dev/" class="logo" aria-label="AJTheDev Home">
+                <span class="logo__text">AJThe<span class="logo__accent">Dev</span></span>
+            </a>
+            
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="https://ajthe.dev/ai-solutions/" class="nav-link">AI Solutions</a></li>
+                <li><a href="https://ajthe.dev/fivem-scripts/" class="nav-link">FiveM Scripts</a></li>
+                <li><a href="https://ajthe.dev/api-web/" class="nav-link">Web Dev</a></li>
+                <li><a href="https://ajthe.dev/blog/" class="nav-link">Blog</a></li>
+                <li><a href="https://ajthe.dev/case-studies/" class="nav-link">Case Studies</a></li>
+                <li><a href="https://ajthe.dev/about/" class="nav-link">About</a></li>
+                <li><a href="https://discord.gg/d39aaZXAjh" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Discord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section class="guide-hero">
+            <div class="container container--narrow">
+                <span class="guide-hero__badge">🥉 Starter Guide</span>
+                <h1 class="guide-hero__title">The AJ Suno V5<br>Starter Guide</h1>
+                <p class="guide-hero__subtitle">
+                    Tired of Suno acting random? Learn the exact basics to get clean, consistent tracks — fast.
+                </p>
+                <div class="guide-stats">
+                    <div class="guide-stat">
+                        <span class="guide-stat__number">8</span>
+                        <span class="guide-stat__label">Chapters</span>
+                    </div>
+                    <div class="guide-stat">
+                        <span class="guide-stat__number">3</span>
+                        <span class="guide-stat__label">Tag Categories</span>
+                    </div>
+                    <div class="guide-stat">
+                        <span class="guide-stat__number">5+</span>
+                        <span class="guide-stat__label">Example Prompts</span>
+                    </div>
+                </div>
+                <p style="color: var(--color-stone); font-size: 0.875rem;">
+                    By AJTheDev • Last updated: November 2025
+                </p>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="container container--narrow">
+            <nav class="guide-toc" aria-label="Table of contents">
+                <h2 class="guide-toc__title">Table of Contents</h2>
+                <ul class="guide-toc__list">
+                    <li class="guide-toc__item"><a href="#introduction" class="guide-toc__link">1. Introduction</a></li>
+                    <li class="guide-toc__item"><a href="#how-suno-works" class="guide-toc__link">2. How Suno V5 Works</a></li>
+                    <li class="guide-toc__item"><a href="#style-prompts" class="guide-toc__link">3. Style Prompts Basics</a></li>
+                    <li class="guide-toc__item"><a href="#structure-tags" class="guide-toc__link">4. Structure Tags</a></li>
+                    <li class="guide-toc__item"><a href="#vocal-tags" class="guide-toc__link">5. Basic Vocal Tags</a></li>
+                    <li class="guide-toc__item"><a href="#production-tags" class="guide-toc__link">6. Basic Production Tags</a></li>
+                    <li class="guide-toc__item"><a href="#examples" class="guide-toc__link">7. Simple Examples</a></li>
+                    <li class="guide-toc__item"><a href="#troubleshooting" class="guide-toc__link">8. Quick Troubleshooting</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- Content -->
+        <div class="container container--narrow">
+            
+            <!-- Chapter 1: Introduction -->
+            <section id="introduction" class="guide-chapter">
+                <span class="guide-chapter__number">Chapter 1</span>
+                <h2 class="guide-chapter__title">Introduction</h2>
+                <div class="guide-content">
+                    <p>Welcome to the Suno V5 Starter Guide! This guide will teach you how to get predictable, consistent outputs instead of random junk.</p>
+                    
+                    <p>Suno V5 is an AI music generation tool that creates songs from your prompts. Unlike earlier versions, V5 understands context, emotion, and musical structure. But most beginners get frustrated because Suno seems random — one generation sounds perfect, the next is completely wrong.</p>
+                    
+                    <p>The truth? Suno isn't random. You just need to learn the core systems: structure tags, vocal delivery tags, and basic mix/production. Master these fundamentals, and you'll get clean, consistent tracks every time.</p>
+                    
+                    <hr>
+                    
+                    <h3>What You'll Learn</h3>
+                    <ul>
+                        <li>How Suno V5 interprets your prompts</li>
+                        <li>Using structure tags to organize your songs</li>
+                        <li>Basic vocal delivery tags</li>
+                        <li>Basic production and mix tags</li>
+                        <li>Ready-made prompts for pop, hip-hop, and rock</li>
+                        <li>Basic troubleshooting (wrong vocals, messy mix, genre confusion)</li>
+                    </ul>
+                    
+                    <div class="guide-callout guide-callout--tip">
+                        <p class="guide-callout__title">What This Guide Doesn't Cover</p>
+                        <p>No experimental tags, no multi-pass systems, no chaos elements. This is pure fundamentals — the exact basics you need to get consistent results.</p>
+                    </div>
+                    
+                    <hr>
+                    
+                    <h3>Who This Guide Is For</h3>
+                    <ul>
+                        <li>Complete beginners to Suno</li>
+                        <li>Casual users who want better results</li>
+                        <li>Content creators needing simple music</li>
+                        <li>Anyone frustrated with inconsistent Suno output</li>
+                    </ul>
+                    
+                    <blockquote>
+                        "Master the basics first. Once you understand structure tags, vocal tags, and production tags, you'll get consistent results every time."
+                    </blockquote>
+                    
+                    <p>Let's get started!</p>
+                </div>
+            </section>
+
+            <!-- Chapter 2: How Suno Works -->
+            <section id="how-suno-works" class="guide-chapter">
+                <span class="guide-chapter__number">Chapter 2</span>
+                <h2 class="guide-chapter__title">How Suno V5 Works</h2>
+                <div class="guide-content">
+                    <p>Suno V5 uses three main systems working together to create music:</p>
+                    
+                    <h3>1. The Interpretation System</h3>
+                    <p>This reads your prompts and tags, understanding what you want. When you write:</p>
+                    <pre><code>[Verse | soft vocal | intimate]</code></pre>
+                    <p>Suno understands you want a quiet, personal-sounding verse.</p>
+                    
+                    <h3>2. The Composer System</h3>
+                    <p>This creates the actual music: melodies, chords, rhythms, and arrangements. It decides what instruments play when.</p>
+                    
+                    <h3>3. The Production System</h3>
+                    <p>This shapes the final sound: reverb, compression, stereo width, and overall mix quality.</p>
+                    
+                    <hr>
+                    
+                    <h3>The Key Rule</h3>
+                    <div class="guide-callout">
+                        <p class="guide-callout__title">Important</p>
+                        <p>Suno will ignore instructions that don't make musical sense. If you ask for "whispered vocals" but your lyrics are aggressive rap, Suno will likely ignore the whisper tag because it doesn't fit.</p>
+                    </div>
+                    
+                    <h3>Why V5 Is Better</h3>
+                    <ul>
+                        <li><strong>Better structure understanding</strong> — It knows the difference between verses and choruses</li>
+                        <li><strong>More consistent</strong> — Follows your tags more reliably</li>
+                        <li><strong>Smarter defaults</strong> — Makes better musical choices when you're not specific</li>
+                        <li><strong>Respects exclusions</strong> — If you say "no autotune," it actually won't use autotune</li>
+                    </ul>
+                    
+                    <p>Now that you understand the basics, let's learn how to write effective prompts.</p>
+                </div>
+            </section>
+
+            <!-- Chapter 3: Style Prompts -->
+            <section id="style-prompts" class="guide-chapter">
+                <span class="guide-chapter__number">Chapter 3</span>
+                <h2 class="guide-chapter__title">Style Prompts Basics</h2>
+                <div class="guide-content">
+                    <p>The style prompt is the most important part of your song. It tells Suno what genre, tempo, and overall vibe you want.</p>
+                    
+                    <h3>The Rules</h3>
+                    <table>
+                        <tr>
+                            <th>Element</th>
+                            <th>Limit</th>
+                        </tr>
+                        <tr>
+                            <td>Character Limit</td>
+                            <td>1,000 characters</td>
+                        </tr>
+                        <tr>
+                            <td>Format</td>
+                            <td>Comma-separated terms</td>
+                        </tr>
+                    </table>
+                    
+                    <p>Stay under 1,000 characters. Text after the limit is ignored.</p>
+                    
+                    <hr>
+                    
+                    <h3>What to Include</h3>
+                    
+                    <h4>1. Tempo (BPM)</h4>
+                    <pre><code>120 BPM</code></pre>
+                    <p>This tells Suno how fast your song should be. Different genres have different typical BPMs.</p>
+                    
+                    <h4>2. Genre</h4>
+                    <pre><code>pop, rock, hip-hop, electronic</code></pre>
+                    <p>Be specific. "Hip-hop" is okay, but "90s boom bap" or "modern trap" is better.</p>
+                    
+                    <h4>3. Instruments</h4>
+                    <pre><code>electric guitar, drums, bass, piano</code></pre>
+                    <p>List the main instruments you want to hear.</p>
+                    
+                    <h4>4. Vocal Style</h4>
+                    <pre><code>male vocal, female vocal, gritty, clean</code></pre>
+                    <p>Describe the voice you want.</p>
+                    
+                    <h4>5. Mix Style</h4>
+                    <pre><code>modern punch, wide stereo, warm analog</code></pre>
+                    <p>How should the final mix sound?</p>
+                    
+                    <h4>6. Exclusions (Optional but Helpful)</h4>
+                    <pre><code>Exclude: no autotune, no melisma</code></pre>
+                    <p>Tell Suno what you DON'T want.</p>
+                    
+                    <hr>
+                    
+                    <h3>Simple Style Prompt Examples</h3>
+                    
+                    <h4>Pop Song</h4>
+                    <pre><code>120 BPM, pop, modern pop, synth, drums, female vocal, clean delivery, bright mix, wide stereo, Exclude: no heavy distortion</code></pre>
+                    
+                    <h4>Rock Song</h4>
+                    <pre><code>130 BPM, rock, electric guitar, live drums, bass, male vocal, raw delivery, warm analog, Exclude: no electronic drums</code></pre>
+                    
+                    <h4>Hip-Hop Track</h4>
+                    <pre><code>140 BPM, hip-hop, trap, 808 bass, trap drums, male vocal, gritty delivery, modern punch, Exclude: no melisma, no pop vocals</code></pre>
+                    
+                    <hr>
+                    
+                    <h3>Common Mistakes</h3>
+                    <p><strong>❌ Too vague:</strong> <code>good music, nice beat</code></p>
+                    <p><strong>✅ Better:</strong> <code>120 BPM, pop, synth pop, modern production</code></p>
+                    
+                    <p><strong>❌ Contradictory:</strong> <code>quiet intimate vocals, loud stadium rock</code></p>
+                    <p><strong>✅ Better:</strong> Choose one vibe and stick with it</p>
+                    
+                    <p><strong>❌ Too long:</strong> Going over 1,000 characters means parts get cut off</p>
+                    <p><strong>✅ Better:</strong> Keep it concise, under 1,000 characters</p>
+                </div>
+            </section>
+
+            <!-- Chapter 4: Structure Tags -->
+            <section id="structure-tags" class="guide-chapter">
+                <span class="guide-chapter__number">Chapter 4</span>
+                <h2 class="guide-chapter__title">Structure Tags</h2>
+                <div class="guide-content">
+                    <p>Structure tags are the foundation of your song. They tell Suno which part of the song you're writing.</p>
+                    
+                    <p><strong>Every section of your lyrics should start with a structure tag.</strong></p>
+                    
+                    <h3>Basic Structure Tags</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0;">
+                        <span class="tag-display">[Intro]</span>
+                        <span class="tag-display">[Verse]</span>
+                        <span class="tag-display">[Verse 1]</span>
+                        <span class="tag-display">[Verse 2]</span>
+                        <span class="tag-display">[Pre-Chorus]</span>
+                        <span class="tag-display">[Chorus]</span>
+                        <span class="tag-display">[Bridge]</span>
+                        <span class="tag-display">[Outro]</span>
+                    </div>
+                    
+                    <h3>How Structure Tags Work</h3>
+                    <p>Each structure tag tells Suno how to treat that section:</p>
+                    
+                    <table>
+                        <tr>
+                            <th>Tag</th>
+                            <th>What It Does</th>
+                        </tr>
+                        <tr>
+                            <td><code>[Intro]</code></td>
+                            <td>Sets up the song, usually instrumental, lower energy</td>
+                        </tr>
+                        <tr>
+                            <td><code>[Verse]</code></td>
+                            <td>Storytelling section, calmer delivery</td>
+                        </tr>
+                        <tr>
+                            <td><code>[Pre-Chorus]</td>
+                            <td>Builds tension before the chorus</td>
+                        </tr>
+                        <tr>
+                            <td><code>[Chorus]</code></td>
+                            <td>Main hook, maximum energy, fullest sound</td>
+                        </tr>
+                        <tr>
+                            <td><code>[Bridge]</code></td>
+                            <td>Contrast section, different feel from verses/chorus</td>
+                        </tr>
+                        <tr>
+                            <td><code>[Outro]</code></td>
+                            <td>Ending section, often fades out</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>Basic Song Structure</h3>
+                    <p>Here's a simple structure you can use:</p>
+                    <pre><code>[Intro]
+(Instrumental intro)
+
+[Verse 1]
+Your first verse lyrics here...
+
+[Chorus]
+Your chorus lyrics here...
+
+[Verse 2]
+Your second verse lyrics here...
+
+[Chorus]
+Your chorus lyrics again...
+
+[Outro]
+(Ending)</code></pre>
+                    
+                    <div class="guide-callout guide-callout--tip">
+                        <p class="guide-callout__title">Tip</p>
+                        <p>Always write your chorus out fully each time. Suno won't automatically repeat it for you.</p>
+                    </div>
+                    
+                    <h3>Why Structure Tags Matter</h3>
+                    <p>Without structure tags, Suno doesn't know where verses end and choruses begin. You'll get a messy, unstructured song. With structure tags, Suno creates proper song sections with the right energy levels.</p>
+                </div>
+            </section>
+
+            <!-- Chapter 5: Vocal Tags -->
+            <section id="vocal-tags" class="guide-chapter">
+                <span class="guide-chapter__number">Chapter 5</span>
+                <h2 class="guide-chapter__title">Basic Vocal Tags</h2>
+                <div class="guide-content">
+                    <p>Vocal tags control how the voice sounds and is delivered. You combine them with structure tags like this:</p>
+                    <pre><code>[Verse | soft vocal]
+[Chorus | belting]
+[Verse | rap verse]</code></pre>
+                    
+                    <h3>Basic Delivery Tags</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0;">
+                        <span class="tag-display">[Soft Vocal]</span>
+                        <span class="tag-display">[Belting]</span>
+                        <span class="tag-display">[Rap Verse]</span>
+                        <span class="tag-display">[Whispered Vocals]</span>
+                        <span class="tag-display">[Clean Vocals]</span>
+                    </div>
+                    
+                    <h3>Gender & Voice Type</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0;">
+                        <span class="tag-display">[Male Vocal]</span>
+                        <span class="tag-display">[Female Vocal]</span>
+                        <span class="tag-display">[Gritty Vocal]</span>
+                        <span class="tag-display">[Breathy Vocals]</span>
+                    </div>
+                    
+                    <h3>Common Vocal Tag Combinations</h3>
+                    <pre><code>[Verse | soft vocal | intimate]
+[Chorus | belting | full power]
+[Verse | rap verse | gritty vocal]
+[Bridge | whispered vocals | emotional]</code></pre>
+                    
+                    <h3>Fixing Common Problems</h3>
+                    
+                    <h4>Problem: Wrong Gender Voice</h4>
+                    <p><strong>Solution:</strong> Specify in BOTH your style prompt AND your tags:</p>
+                    <pre><code>Style Prompt: ... male vocal, baritone ...
+Tags: [Verse | Male Vocal]</code></pre>
+                    
+                    <h4>Problem: Chorus Too Loud/Screaming</h4>
+                    <p><strong>Solution:</strong> Add control tags:</p>
+                    <pre><code>[Chorus | clean vocals | controlled delivery]</code></pre>
+                    
+                    <h4>Problem: Too Much Vocal Flourish (Melisma)</h4>
+                    <p><strong>Solution:</strong> Add to your style prompt:</p>
+                    <pre><code>Exclude: no melisma</code></pre>
+                </div>
+            </section>
+
+            <!-- Chapter 6: Production Tags -->
+            <section id="production-tags" class="guide-chapter">
+                <span class="guide-chapter__number">Chapter 6</span>
+                <h2 class="guide-chapter__title">Basic Production Tags</h2>
+                <div class="guide-content">
+                    <p>Production tags control the final sound: reverb, stereo width, mix quality, and effects.</p>
+                    
+                    <h3>Mix Quality Tags</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0;">
+                        <span class="tag-display">[Wide Stereo]</span>
+                        <span class="tag-display">[Clean Modern Mix]</span>
+                        <span class="tag-display">[Vintage Warmth]</span>
+                        <span class="tag-display">[Modern Punch]</span>
+                    </div>
+                    
+                    <h3>Reverb & Space Tags</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0;">
+                        <span class="tag-display">[Room Reverb]</span>
+                        <span class="tag-display">[Cathedral Reverb]</span>
+                        <span class="tag-display">[Dry Mix]</span>
+                        <span class="tag-display">[Close-Mic]</span>
+                    </div>
+                    
+                    <h3>How to Use Production Tags</h3>
+                    <p>Combine them with structure and vocal tags:</p>
+                    <pre><code>[Verse | soft vocal | close-mic | dry mix]
+[Chorus | belting | wide stereo | cathedral reverb]</code></pre>
+                    
+                    <h3>Fixing Mix Problems</h3>
+                    <table>
+                        <tr>
+                            <th>Problem</th>
+                            <th>Fix</th>
+                        </tr>
+                        <tr>
+                            <td>Muddy/unclear mix</td>
+                            <td><code>[Clean Modern Mix | Wide Stereo]</code></td>
+                        </tr>
+                        <tr>
+                            <td>Too much reverb</td>
+                            <td><code>[Dry Mix | Close-Mic]</code></td>
+                        </tr>
+                        <tr>
+                            <td>Lacks impact</td>
+                            <td><code>[Modern Punch | Wide Stereo]</code></td>
+                        </tr>
+                        <tr>
+                            <td>Too harsh/bright</td>
+                            <td><code>[Vintage Warmth]</code></td>
+                        </tr>
+                    </table>
+                    
+                    <div class="guide-callout guide-callout--tip">
+                        <p class="guide-callout__title">Tip</p>
+                        <p>Start simple. Use 1-2 production tags per section. Too many tags can confuse Suno.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapter 7: Examples -->
+            <section id="examples" class="guide-chapter">
+                <span class="guide-chapter__number">Chapter 7</span>
+                <h2 class="guide-chapter__title">Simple Examples</h2>
+                <div class="guide-content">
+                    <p>Here are complete, ready-to-use examples you can copy and customize.</p>
+                    
+                    <h3>Example 1: Simple Pop Song</h3>
+                    
+                    <h4>Style Prompt:</h4>
+                    <pre><code>120 BPM, pop, modern pop, synth, drums, bass, female vocal, clean delivery, bright mix, wide stereo, Exclude: no heavy distortion</code></pre>
+                    
+                    <h4>Lyrics with Tags:</h4>
+                    <pre><code>[Intro]
+(Instrumental intro, synth pad)
+
+[Verse 1 | Soft Vocal | Intimate]
+Walking down the street tonight,
+Everything feels right,
+The city lights are calling me,
+This is where I want to be.
+
+[Chorus | Belting | Wide Stereo]
+This is my moment,
+This is my time,
+Nothing can stop me,
+I'm feeling fine.
+
+[Verse 2 | Soft Vocal]
+Another day, another chance,
+I'm taking every opportunity,
+Living life without a plan,
+Just being who I want to be.
+
+[Chorus | Belting | Full Power]
+This is my moment,
+This is my time,
+Nothing can stop me,
+I'm feeling fine.
+
+[Outro]
+(Fade out)</code></pre>
+                    
+                    <hr>
+                    
+                    <h3>Example 2: Simple Hip-Hop Track</h3>
+                    
+                    <h4>Style Prompt:</h4>
+                    <pre><code>140 BPM, hip-hop, trap, 808 bass, trap drums, male vocal, gritty delivery, modern punch, Exclude: no melisma, no pop vocals</code></pre>
+                    
+                    <h4>Lyrics with Tags:</h4>
+                    <pre><code>[Intro]
+(808 pattern, minimal)
+
+[Verse 1 | Rap Verse | Gritty Vocal]
+I'm on my grind, working every day,
+Got my goals in sight, I'm here to stay,
+Building my empire, step by step,
+No time for sleep, no time to rest.
+
+[Chorus | Gang Vocals | Aggressive]
+We're on top, we're on top,
+Nothing's gonna make us stop,
+We're on top, we're on top,
+Rising to the top.
+
+[Verse 2 | Rap Verse | Gritty Vocal]
+They said I couldn't do it, I proved them wrong,
+Now I'm moving forward, I'm moving strong,
+Every obstacle I face, I overcome,
+This is my story, this is my song.
+
+[Chorus | Gang Vocals | Full Power]
+We're on top, we're on top,
+Nothing's gonna make us stop,
+We're on top, we're on top,
+Rising to the top.
+
+[Outro]
+(808s fade out)</code></pre>
+                    
+                    <hr>
+                    
+                    <h3>Example 3: Simple Rock Song</h3>
+                    
+                    <h4>Style Prompt:</h4>
+                    <pre><code>130 BPM, rock, electric guitar, live drums, bass, male vocal, raw delivery, warm analog, Exclude: no electronic drums</code></pre>
+                    
+                    <h4>Lyrics with Tags:</h4>
+                    <pre><code>[Intro | Electric Guitar | Building]
+(Guitar riff)
+
+[Verse 1 | Raw Vocal | Live Drums]
+I've been waiting for this moment,
+All my life I've been alone,
+But now I see the light ahead,
+I'm never going back home.
+
+[Pre-Chorus | Building]
+Something's changing in the air,
+I can feel it everywhere.
+
+[Chorus | Belting | Full Band]
+This is who I am,
+This is what I do,
+I'm breaking free,
+I'm starting new.
+
+[Verse 2 | Raw Vocal]
+The past is behind me now,
+I'm moving forward fast,
+No more looking back,
+This moment's built to last.
+
+[Pre-Chorus | Building]
+Something's changing in the air,
+I can feel it everywhere.
+
+[Chorus | Belting | Maximum Energy]
+This is who I am,
+This is what I do,
+I'm breaking free,
+I'm starting new.
+
+[Outro | Guitar Riff]
+(Ring out)</code></pre>
+                    
+                    <div class="guide-callout">
+                        <p class="guide-callout__title">Remember</p>
+                        <p>These are starting points. Experiment with different tags, tempos, and styles. The more you practice, the better you'll get!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapter 8: Troubleshooting -->
+            <section id="troubleshooting" class="guide-chapter">
+                <span class="guide-chapter__number">Chapter 8</span>
+                <h2 class="guide-chapter__title">Quick Troubleshooting</h2>
+                <div class="guide-content">
+                    <p>Having problems? Here are quick fixes for common issues:</p>
+                    
+                    <table>
+                        <tr>
+                            <th>Problem</th>
+                            <th>Quick Fix</th>
+                        </tr>
+                        <tr>
+                            <td>Wrong gender voice</td>
+                            <td>Specify in style prompt AND tags: <code>[Male Vocal]</code> or <code>[Female Vocal]</code></td>
+                        </tr>
+                        <tr>
+                            <td>Chorus too loud/screaming</td>
+                            <td>Add: <code>[Chorus | clean vocals | controlled]</code></td>
+                        </tr>
+                        <tr>
+                            <td>Too much vocal flourish</td>
+                            <td>Add to style prompt: <code>Exclude: no melisma</code></td>
+                        </tr>
+                        <tr>
+                            <td>Muddy/unclear mix</td>
+                            <td>Add: <code>[Clean Modern Mix | Wide Stereo]</code></td>
+                        </tr>
+                        <tr>
+                            <td>Too much reverb</td>
+                            <td>Add: <code>[Dry Mix | Close-Mic]</code></td>
+                        </tr>
+                        <tr>
+                            <td>Song structure is messy</td>
+                            <td>Make sure every section starts with a structure tag: <code>[Verse]</code>, <code>[Chorus]</code>, etc.</td>
+                        </tr>
+                        <tr>
+                            <td>Wrong drums (electronic when you want live)</td>
+                            <td>Add: <code>[Live Drums]</code> in tags, and <code>Exclude: no electronic drums</code> in style prompt</td>
+                        </tr>
+                        <tr>
+                            <td>Genre sounds wrong</td>
+                            <td>Be more specific in style prompt. "Hip-hop" is vague. Try "90s boom bap" or "modern trap"</td>
+                        </tr>
+                    </table>
+                    
+                    <hr>
+                    
+                    <h3>If Nothing Works</h3>
+                    <ol>
+                        <li><strong>Simplify</strong> — Remove extra tags, use just structure tags</li>
+                        <li><strong>Check your style prompt</strong> — Make sure it's under 1,000 characters</li>
+                        <li><strong>Try a different BPM</strong> — Some genres work better at specific tempos</li>
+                        <li><strong>Start over</strong> — Sometimes a fresh start helps</li>
+                    </ol>
+                    
+                    <div class="guide-callout">
+                        <p class="guide-callout__title">Remember</p>
+                        <p>Most problems come from being too vague or having conflicting instructions. When in doubt, simplify!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="guide-cta">
+                <h2 class="guide-cta__title">🎯 Ready to Go Further?</h2>
+                <p class="guide-cta__text">
+                    You've mastered the fundamentals. Now it's time to choose your path:
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <div style="background: var(--color-concrete); border: 1px solid var(--color-brick-dark); border-radius: 8px; padding: 2rem; text-align: left;">
+                        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-white); margin-bottom: 0.5rem;">🔸 Creator Guide</h3>
+                        <p style="color: var(--color-chalk); margin-bottom: 1rem; font-size: 0.95rem;">
+                            Want structure, consistency, and genre-accurate albums? Level up to the Creator Guide.
+                        </p>
+                        <p style="font-size: 1.5rem; font-weight: 700; color: var(--color-white); margin-bottom: 1rem;">£24.99</p>
+                        <a href="https://ajthe.dev/SunoGuide" class="btn btn--primary" style="width: 100%; display: block; text-align: center;">Get Creator Guide →</a>
+                    </div>
+                    <div style="background: var(--color-concrete); border: 1px solid var(--color-brick-dark); border-radius: 8px; padding: 2rem; text-align: left;">
+                        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-white); margin-bottom: 0.5rem;">🔺 Mastery Guide</h3>
+                        <p style="color: var(--color-chalk); margin-bottom: 1rem; font-size: 0.95rem;">
+                            Want full chaos, control, and experimental workflows? Step into the Mastery Guide.
+                        </p>
+                        <p style="font-size: 1.5rem; font-weight: 700; color: var(--color-white); margin-bottom: 1rem;">£59.99</p>
+                        <a href="https://ajthe.dev/SunoMastery" class="btn btn--primary" style="width: 100%; display: block; text-align: center;">Get Mastery Guide →</a>
+                    </div>
+                </div>
+                <p style="color: var(--color-stone); margin-top: 2rem; font-size: 0.875rem;">
+                    You're not just upgrading — you're choosing your path and rewarding yourself with value.
+                </p>
+            </section>
+
+        </div><!-- /.container -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="https://ajthe.dev/" class="logo" aria-label="AJTheDev Home">
+                        <span class="logo__text">AJThe<span class="logo__accent">Dev</span></span>
+                    </a>
+                    <p class="footer__tagline">North London developer. 17+ years. No bullshit.</p>
+                </div>
+                
+                <nav class="footer__nav" aria-label="Footer navigation">
+                    <h3 class="footer__nav-title">Services</h3>
+                    <ul>
+                        <li><a href="https://ajthe.dev/ai-solutions/">AI Solutions</a></li>
+                        <li><a href="https://ajthe.dev/fivem-scripts/">FiveM Scripts</a></li>
+                        <li><a href="https://ajthe.dev/api-web/">API & Web Dev</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer__nav" aria-label="Social links">
+                    <h3 class="footer__nav-title">Connect</h3>
+                    <ul>
+                        <li><a href="https://discord.gg/d39aaZXAjh" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                        <li><a href="https://github.com/alexjamesdean" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="mailto:aj@ajthe.dev">Email</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 AJTheDev. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://ajthe.dev/assets/js/navigation.js" defer></script>
+    <script>
+        // Back to top button
+        const backToTop = document.querySelector('.back-to-top');
+        if (backToTop) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            backToTop.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                    return;
+                }
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Copy code blocks
+        document.querySelectorAll('pre').forEach(pre => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'code-block-wrapper';
+            pre.parentNode.insertBefore(wrapper, pre);
+            wrapper.appendChild(pre);
+            
+            const btn = document.createElement('button');
+            btn.className = 'copy-btn';
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', () => {
+                const code = pre.querySelector('code') || pre;
+                navigator.clipboard.writeText(code.textContent).then(() => {
+                    btn.textContent = 'Copied!';
+                    setTimeout(() => btn.textContent = 'Copy', 2000);
+                }).catch(err => {
+                    console.error('Failed to copy:', err);
+                });
+            });
+            wrapper.appendChild(btn);
+        });
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9a8bb0509e67ef2b","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"5070e21320304a1ba2b0a42ce9682840"}' crossorigin="anonymous"></script>
+</body>
+</html>
+
