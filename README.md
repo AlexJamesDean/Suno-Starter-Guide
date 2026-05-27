@@ -25,7 +25,7 @@ This isn’t another YouTube thread or Discord rumor. It’s a system that works
 - ✔️ Consistency tips that *actually* work
 
 All inside **`starter.html`**, a clean local HTML file for offline or browser reading.
-
+- 🛒 [Free Download on Gumroad](https://ajthedev.gumroad.com/l/suno-starter-guide)
 ---
 
 ## 🧭 Where to Next?
@@ -44,7 +44,6 @@ Once you’ve mastered the basics, choose your next path:
 ## 🌍 Other Places You’ll Find It
 
 - 🔗 [AJThe.Dev – Official Site](https://ajthe.dev)
-- 🛒 [Free Download on Gumroad](https://ajthedev.gumroad.com/l/suno-starter-guide)
 
 ---
 
